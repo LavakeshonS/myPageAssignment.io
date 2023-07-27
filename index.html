@@ -1,0 +1,189 @@
+<!-- *
+ * WEB222 – Assignment Final
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name:       Lavakeshon Selvarajah
+ *      Student ID: 106393150
+ *      Date:       December 12, 2022
+ * -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Diplomata SC|Libre Barcode 39 Text"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/320f9f1057.js" crossorigin="anonymous"></script>
+    <title>My Page</title>
+  </head>
+  <body>
+    <main id="main">
+    <div class="parentGrid">
+      <div class="grid-item grid-item-1"><h1>MY PAGE</h1></div>
+      <div class="grid-item grid-item-2">
+        <img id="image" src="img/IMG-2241.jpg" alt="profileImage" class="shadow" /><br />
+        <p id="name">Lavakeshon Selvarajah</p>
+        <p id="title">Web developer, Computer Programmer</p>
+        <a href="resources/Resume.pdf" download="newfilename"
+          ><button id="btn1" class="button button1" ><i class="fa-solid fa-download fa-beat-fade"></i> Resume</button></a
+        >
+        <a href="#fname"><button id="btn2" class="button button2" type="button"><i class="fa-solid fa-file fa-bounce"></i> Contact Me</button></a>
+      </div>
+      <div class="grid-item grid-item-3">
+        <h3>Honesty Statement:</h3>
+        <p>
+          I declare that my assessment is wholly my own work in accordance with
+          Seneca Academic Policy. No part of this assessment has been copied
+          manually or electronically from any other source (including web sites)
+          except for the information supplied by the WEB222 instructors and / or
+          made available in this assessment for my use. I also declare that no
+          part of this assignment has been distributed to other students.
+        </p>
+        <p><strong>DATE:</strong> <time> 2022-12-12 </time></p>
+      </div>
+      <div class="grid-item grid-item-4">
+        <h3>Basic information</h3><br>
+        <span id="info">AGE: 28</span><br />
+        <span id="info">EMAIL: lselvarajah3@myseneca.ca</span><br />
+        <span id="info">LANGUAGE: English</span><br />
+        <span id="info">CLASS SEC: NGG</span><br />
+        <span id="info">STUDENT ID: 106393150</span><br />
+        <span id="info">INSTRUCTOR: Harry Scanlan </span> <br />
+      </div>
+      <div class="grid-item grid-item-5"><h2>Education</h2></div>
+      <div class="grid-item grid-item-6">
+        <p>2011 - 2014</p>
+        <h4>Bachelor's Degree</h4>
+      </div>
+      <div class="grid-item grid-item-7">
+        <h2>Bachelor's in Biotechnology</h2>
+        <p>Madras University</p>
+      </div>
+      <div class="grid-item grid-item-8">
+        <p>2016 - 2018</p>
+        <h4>Post-Degree Diploma</h4>
+      </div>
+      <div class="grid-item grid-item-9">
+        <h2>Post-Degree Diploma in Advanced Biotechnology</h2>
+        <p>Centennial College</p>
+      </div>
+      <div class="grid-item grid-item-10">
+        <h3 id="sub1">Contact me</h3>
+        <div class="form-group">
+          <form action="https://httpbin.org/post" method="post">
+            <label for="fname">First and Last Name:</label>
+            <input
+              type="text"
+              id="fname"
+              name="name"
+              placeholder="Write your name"
+              required
+            />
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Write your email"
+              required
+            />
+            <label for="home">Home Address:</label>
+            <input
+              type="text"
+              id="home"
+              name="address"
+              placeholder="Write your home address"
+              required
+            />
+            <label for="cname">City:</label>
+            <input
+              type="text"
+              id="cname"
+              name="city"
+              placeholder="Select a city"
+              id="city"
+              list="citylist"
+              required
+            />
+            <datalist id="citylist">
+              <option>Toronto</option>
+              <option>Ajax</option>
+              <option>Pickering</option>
+              <option>Montreal</option>
+              <option>Brampton</option>
+              <option>Whitby</option>
+            </datalist>
+            <label for="pcode"> Postal Code:</label>
+            <input
+              id="pcode"
+              type="text"
+              name="postal code"
+              placeholder="Enter your postal code"
+              required
+              pattern="[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]|"
+            />
+            <div class="form-group">
+              Question:<input
+                type="radio"
+                name="type"
+                id="Question"
+                value="Question"
+                onclick="disappear()"
+              />
+              Comment:<input
+                type="radio"
+                name="type"
+                value="Comment"
+                onclick="disappear()"
+              />
+              Hiring:<input
+                type="radio"
+                name="type"
+                id="Hiring"
+                value="Hiring"
+                onclick="appear()"
+              />
+              <div id="rateDisplay">
+                <label for="rate">Rate</label>
+                <input
+                  type="text"
+                  name="rate"
+                  id="rate"
+                  placeholder="Enter rate per hour"
+                  pattern="[0-9]{0,3}"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Write a message!"
+              ></textarea>
+              <div class="form-check">
+                <input type="submit" value="Submit" class="submit"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </main>
+  </body>
+</html>
